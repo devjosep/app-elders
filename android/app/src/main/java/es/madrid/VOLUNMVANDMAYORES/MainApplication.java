@@ -1,4 +1,4 @@
-package com.volunmvandmayores;
+package es.madrid.VOLUNMVANDMAYORES;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

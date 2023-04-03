@@ -93,9 +93,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.volunmvandmayores"
+    namespace "es.madrid.VOLUNMVANDMAYORES"
     defaultConfig {
-        applicationId "com.volunmvandmayores"
+        applicationId "es.madrid.VOLUNMVANDMAYORES"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
