@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>FE12DB44-19AD-4ED5-9EA3-B56570DFE0F9</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.068929 0 0 0 0 0.068929 0 0 0 0 0.217391 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Styles" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Styles-Iconos" transform="translate(-360.000000, -592.000000)">
+            <g id="Group" transform="translate(360.000000, 592.000000)" filter="url(#filter-1)">
+                <g transform="translate(0.000000, 3.000000)">
+                    <path d="M19.4558886,15.3723703 L28.216,25 L3.792,25 L12.5445066,15.3727656 L16,18.8284704 L19.4558886,15.3723703 Z M0.999,3.828 L9.71400322,12.5422315 L0.999,22.138 L0.999,3.828 Z M30.999,3.818 L30.999,22.126 L22.2859957,12.5414815 L30.999,3.818 Z M28.171,1 L15.9997091,13.1711192 L3.818,1 L28.171,1 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="2" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

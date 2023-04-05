@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Mensaje</title>
+    <g id="Styles" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Styles-Iconos" transform="translate(-304.000000, -592.000000)" fill="#121237">
+            <g transform="translate(304.000000, 592.000000)">
+                <path d="M30,3 C31.1045695,3 32,3.8954305 32,5 L32,27 C32,28.1045695 31.1045695,29 30,29 L2,29 C0.8954305,29 0,28.1045695 0,27 L0,5 C0,3.8954305 0.8954305,3 2,3 L30,3 Z M12.51,16.924 L3.35,27 L28.649,27 L19.49,16.924 L16,20.4142136 L12.51,16.924 Z M30,6.414 L20.905,15.509 L30,25.514 L30,6.414 Z M2,6.415 L2,25.513 L11.095,15.509 L2,6.415 Z M28.584,5 L3.415,5 L16,17.585 L28.584,5 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
