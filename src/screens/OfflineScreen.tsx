@@ -2,7 +2,9 @@ import React, { ReactElement } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
 import { useAccessibilityAutoFocus } from '@client/common';
-import { useTheme, BuildStyles } from '@client/ui-components/src/utils';
+// import { useAccessibilityAutoFocus } from '../utils/common/';
+// import { useTheme, BuildStyles } from '@client/ui-components/src/utils';
+import { useTheme, BuildStyles } from '../utils';
 
 const OfflineScreen = (): ReactElement => {
   const { accessibility } = useAccessibilityAutoFocus();

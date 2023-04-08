@@ -12,8 +12,8 @@ import { useAccessibilityAutoFocus } from '@client/common/src/shared/hooks/useAc
 import { dateToString } from '@client/common/src/utils/dates';
 
 import { BuildStyles, useTheme } from '../../utils';
-import ChevronLeft from 'icons/chevronLeft.svg';
-import ChevronRight from 'icons/chevronRight.svg';
+import ChevronLeft from '../../../assets/icons/chevronLeft.svg';
+import ChevronRight from '../../../assets/icons/chevronRight.svg';
 
 type CalendarHeaderProps = {
   month: Date;

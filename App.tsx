@@ -1,124 +1,71 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
 
 import React, { useEffect } from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+// import SplashScreen from 'react-native-splash-screen';
+import 'react-native-gesture-handler';
+import 'reflect-metadata';
+// import { KeyboardAvoidingView, LogBox, Platform } from 'react-native';
+import { LogBox, Platform, Text } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+// import { LoadResources } from 'components/LoadResources';
+// import { configuration } from 'configuration';
+// import { ErrorBoundary } from 'react-error-boundary';
+// import { Provider as PaperProvider } from 'react-native-paper';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+// import { QueryClientProvider } from 'react-query';
 
-import SplashScreen from 'react-native-splash-screen';
+// import {
+//   AccessibilityServiceProvider,
+//   ChatConnectionProvider,
+//   queryClient
+// } from '@client/common';
+// import { queryClient } from './src/utils/http';
+// import { configureFontScaling } from '@client/ui-components/src/utils';
+import { configureFontScaling } from './src/utils';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+// import { Error } from './components/Error';
+import { Error } from './src/components/Error';
 
-function Section({children, title}: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+import { MainNavigator as Navigation } from './src/navigation';
+import { View } from 'react-native';
+// Hack: see: https://github.com/facebook/react-native/issues/12981
+// Hack FlatList see: https://forums.expo.io/t/warning-virtualizedlists-should-never-be-nested-inside-plain-scrollviews-with-the-same-orientation-use-another-virtualizedlist-backed-container-instead/31361/5
+LogBox.ignoreLogs([
+  'Setting a timer',
+  'VirtualizedLists should never be nested'
+]);
 
-function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+configureFontScaling();
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  useEffect(() => {
-    SplashScreen.hide();
-  }, [])
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
+// const { SERVICE_URL } = configuration;
+// useEffect(() => {
+//   SplashScreen.hide();
+// }, [])
+const App = () => (
+  // <LoadResources>
+  <SafeAreaProvider>
+    {/* <QueryClientProvider client={queryClient}> */}
+    {/* <AccessibilityServiceProvider> */}
+    {/* <ChatConnectionProvider serviceUrl={SERVICE_URL}> */}
+    {/* <PaperProvider> */}
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
+      {/* <ErrorBoundary FallbackComponent={Error}> */}
+      {/* <KeyboardAvoidingView
+                    behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+                    style={{
+                      flex: 1
+                    }}
+                  > */}
+      <Navigation />
+      {/* <View><Text>hola</Text></View> */}
+      {/* </KeyboardAvoidingView> */}
+      {/* </ErrorBoundary> */}
     </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+    {/* </PaperProvider> */}
+    {/* </ChatConnectionProvider> */}
+    {/* </AccessibilityServiceProvider> */}
+    {/* </QueryClientProvider> */}
+  </SafeAreaProvider>
+  // </LoadResources>
+);
 
 export default App;

@@ -3,9 +3,10 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { StackScreenProps } from '@react-navigation/stack';
 
-import { useTheme, BuildStyles } from '@client/ui-components/src/utils';
+// import { useTheme, BuildStyles } from '@client/ui-components/src/utils';
+import { useTheme, BuildStyles } from '../utils';
 
-import { RootStackParamList } from '../types';
+import { RootStackParamList } from '../navigation/types';
 
 export default function NotFoundScreen({
   navigation
