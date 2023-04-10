@@ -6,9 +6,12 @@
     "build": "echo 'Nothing to build'"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.9",
     "@hookform/resolvers": "^0.1.1",
     "@react-native-community/slider": "4.1.12",
     "@react-native-picker/picker": "2.1.0",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "~0.64.12",
     "expo": "^43.0.0",
     "expo-status-bar": "~1.1.0",
     "react": "17.0.1",
@@ -22,15 +25,17 @@
     "react-native-tab-view": "^2.15.2",
     "react-native-web": "0.17.1",
     "react-query": "^3.13.12",
-    "yup": "^0.29.3",
-    "@babel/core": "^7.12.9",
-    "@types/react": "~17.0.21",
-    "@types/react-native": "~0.64.12",
-    "typescript": "~5.0.2"
+    "typescript": "~5.0.2",
+    "yup": "^0.29.3"
   },
   "peerDependencies": {
     "@babel/core": "^7.12.9"
   },
-  "resolutions": { "@types/react": "~17.0.21" },
-  "private": true
+  "resolutions": {
+    "@types/react": "~17.0.21"
+  },
+  "private": true,
+  "dependencies": {
+    "react-native-vector-icons": "^9.2.0"
+  }
 }

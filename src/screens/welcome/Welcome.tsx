@@ -17,6 +17,7 @@ import { useTheme, BuildStyles } from '../../utils'
 // '@client/ui-components/src/utils';
 
 import { RouteParams } from './routes';
+import { Button } from '@client/ui-components/src/components';
 
 const Welcome = () => {
   // const { accessibility } = useAccessibilityAutoFocus();
@@ -46,7 +47,7 @@ const Welcome = () => {
           //   }
           // )}
           style={styles.welcomeImage}
-          source={require('../../assets/images/bienvenida.png')}
+          source={require('../../../assets/images/bienvenida.png')}
         />
         <Text
           // {...accessibility(

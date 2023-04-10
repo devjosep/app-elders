@@ -48,7 +48,7 @@ const Error = (error: ErrorProps) => {
         //     importantForAccessibility: 'no-hide-descendants'
         //   }
         // )}
-        source={require('../assets/images/error.png')}
+        source={require('../../assets/images/error.png')}
         style={styles.image}
       />
       <View

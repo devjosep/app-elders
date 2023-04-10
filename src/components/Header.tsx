@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text, StyleSheet, Platform } from 'react-native';
+import { View, Image, Text, StyleSheet, Platform , StatusBar} from 'react-native';
 
 // import { useNavigation } from '@react-navigation/core';
 // import { StatusBar } from 'expo-status-bar';
@@ -7,7 +7,7 @@ import { View, Image, Text, StyleSheet, Platform } from 'react-native';
 // import { useAccessibilityAutoFocus, useAuth } from '@client/common';
 // import { NotificationBell } from '@client/ui-components/src/components';
 // import { useTheme } from '@client/ui-components/src/utils/useTheme';
-
+import { useTheme } from '../utils';
 type HeaderProps = {
   screenName: string;
   autoFocus?: boolean;
@@ -29,10 +29,11 @@ const Header = ({
 
   return (
     <>
-      {/* <StatusBar
-        backgroundColor={theme.primary}
-        style={Platform.OS === 'android' ? 'light' : 'dark'}
-      /> */}
+      <StatusBar
+        // backgroundColor={theme.primary}
+        backgroundColor={"#4630eb"}
+        // style={Platform.OS === 'android' ? 'light' : 'dark'}
+      />
       <View>
         <View
           // {...accessibility(
