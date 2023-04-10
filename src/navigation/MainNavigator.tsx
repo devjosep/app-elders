@@ -47,6 +47,7 @@ import { ErrorBoundaryWrapper } from './shared/components/ErrorBoundaryWrapper';
 // import { StackRoutes as RegisterStackRoutes } from '../screens/features/register/routes';
 import { StackRoutes as WelcomeRoutes } from '../screens/welcome/routes';
 import Welcome from '../screens/welcome/Welcome';
+import { View } from 'react-native';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -82,7 +83,8 @@ const generateRoutes = (routeObject: any) =>
         };
       }}
     >
-      {ErrorBoundaryWrapper(route.component)}
+      {/* {ErrorBoundaryWrapper(route.component)} */}
+      {route.component}
     </Stack.Screen>
   ));
 
@@ -112,14 +114,13 @@ const MainNavigator = () => {
     <NavigationContainer>
       {/* <Stack.Navigator headerMode='screen'> */}
       <Stack.Navigator >
-
-        <Stack.Screen name="Welcome" component={Welcome} />
-        {/* <> */}
-        {/* {generateRoutes(WelcomeRoutes)} */}
-        {/* {generateRoutes(LoginRoutes)} */}
-        {/* {generateRoutes(RegisterStackRoutes)} */}
-        {/* {generateRoutes(RecoveryStackRoutes)} */}
-        {/* </> */}
+        {/* <Stack.Screen name="Welcome" component={Welcome} /> */}
+        <>
+          {generateRoutes(WelcomeRoutes)}
+          {/* {generateRoutes(LoginRoutes)} */}
+          {/* {generateRoutes(RegisterStackRoutes)} */}
+          {/* {generateRoutes(RecoveryStackRoutes)} */}
+        </>
 
       </Stack.Navigator>
     </NavigationContainer>

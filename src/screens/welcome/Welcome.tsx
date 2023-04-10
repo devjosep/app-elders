@@ -17,7 +17,8 @@ import { useTheme, BuildStyles } from '../../utils'
 // '@client/ui-components/src/utils';
 
 import { RouteParams } from './routes';
-import { Button } from '@client/ui-components/src/components';
+import { Button } from '../../components/shared/Button';
+// import { Button } from '@client/ui-components/src/components';
 
 const Welcome = () => {
   // const { accessibility } = useAccessibilityAutoFocus();
@@ -86,7 +87,8 @@ const Welcome = () => {
             >
               Si ya estás registrado
             </Text>
-            {/* <Button
+            {/* <Button */}
+            <Button
               // {...accessibility(
               //   {
               //     label: 'Iniciar sesión',
@@ -96,8 +98,8 @@ const Welcome = () => {
               //   { accessible: true }
               // )}
               text='Iniciar sesión'
-              onPress={() => {}}
-            /> */}
+              onPress={() => { }}
+            />
           </View>
           <View style={styles.divider} />
           <View style={styles.signUpView}>
@@ -113,7 +115,7 @@ const Welcome = () => {
               Si es la primera vez que utilizas la aplicación, debes
               registrarte.
             </Text>
-            {/* <Button
+             <Button
               // {...accessibility({
               //   label: 'Iniciar registro',
               //   hint: 'Ir a registro',
@@ -122,7 +124,7 @@ const Welcome = () => {
               variant='secondary'
               text='Iniciar registro'
               onPress={() =>{} }
-            /> */}
+            />
             <Text
               // {...accessibility({
               //   label:

@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Image, Text, StyleSheet, Platform , StatusBar} from 'react-native';
+import { View, Image, Text, StyleSheet, Platform, StatusBar } from 'react-native';
+import { useTheme } from '../utils/useTheme';
 
 // import { useNavigation } from '@react-navigation/core';
 // import { StatusBar } from 'expo-status-bar';
@@ -7,7 +8,7 @@ import { View, Image, Text, StyleSheet, Platform , StatusBar} from 'react-native
 // import { useAccessibilityAutoFocus, useAuth } from '@client/common';
 // import { NotificationBell } from '@client/ui-components/src/components';
 // import { useTheme } from '@client/ui-components/src/utils/useTheme';
-import { useTheme } from '../utils';
+// import { useTheme } from '../utils';
 type HeaderProps = {
   screenName: string;
   autoFocus?: boolean;
@@ -24,31 +25,30 @@ const Header = ({
   // const isFetcherError = useAuth((s) => s.isFetcherError);
   // const navigation = useNavigation();
 
-  // const { theme, constants } = useTheme();
-  // const styles = buildStyles({ theme, constants });
+  const { theme, constants } = useTheme();
+  const styles = buildStyles({ theme, constants });
 
   return (
     <>
       <StatusBar
-        // backgroundColor={theme.primary}
-        backgroundColor={"#4630eb"}
-        // style={Platform.OS === 'android' ? 'light' : 'dark'}
+        backgroundColor={theme.primary}
+        style={Platform.OS === 'android' ? 'light' : 'dark'}
       />
       <View>
         <View
-          // {...accessibility(
-          //   {
-          //     label: `Ventana ${screenName}`,
-          //     role: 'header'
-          //   },
-          //   { accessible: true, autoFocus }
-          // )}
-          
+        // {...accessibility(
+        //   {
+        //     label: `Ventana ${screenName}`,
+        //     role: 'header'
+        //   },
+        //   { accessible: true, autoFocus }
+        // )}
+
         >
-          <Image source={require('../assets/images/escudoMadrid.png')} />
+          <Image source={require('../../assets/images/escudoMadrid.png')} />
           <View />
           <View >
-            <Image source={require('../assets/images/appTitle.png')} />
+            <Image source={require('../../assets/images/appTitle.png')} />
             <Text >Madrid te acompaña</Text>
           </View>
         </View>
